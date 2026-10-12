@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ជាងម៉ូតូក្បែរខ្លួន - @TweakkerBot</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Leaflet CSS សម្រាប់បង្ហាញផែនទី -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- Telegram Web App JS SDK -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div class="tg-app">
+        <!-- Header ស្ដាយ Telegram -->
+        <header class="tg-header">
+            <div class="header-icon">🛵</div>
+            <div class="header-title">
+                <h1>ជាងម៉ូតូសង្គ្រោះបន្ទាន់</h1>
+                <p>រកជាងប៉ះកង់ និងជួសជុលក្បែរខ្លួន (@TweakkerBot)</p>
+            </div>
+        </header>
+
+        <!-- Action Button -->
+        <section class="action-section">
+            <button id="find-btn" class="tg-main-button" onclick="findNearbyMechanics()">
+                <span>📍 រកជាងនៅជិតខ្ញុំឥឡូវនេះ</span>
+            </button>
+            <div id="status" class="status-text">សូមចុចប៊ូតុងដើម្បីចាប់ផ្តើមស្វែងរក...</div>
+        </section>
+
+        <!-- Map Container -->
+        <div class="map-container">
+            <div id="map"></div>
+        </div>
+
+        <!-- Mechanic Section -->
+        <section class="mechanic-section">
+            <h2>ជាងម៉ូតូនៅជុំវិញខ្លួន</h2>
+            <div id="list-container" class="list-grid">
+                <!-- ទិន្នន័យជាងនឹងបង្ហាញនៅទីនេះ -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
